@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root :to => "portfolios#index"
+  root to: 'portfolios#index'
   resources :portfolios
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
