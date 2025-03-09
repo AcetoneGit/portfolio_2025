@@ -2579,3 +2579,22 @@ Processing by PortfoliosController#index as HTML
 Completed 200 OK in 95ms (Views: 83.4ms | ActiveRecord: 0.0ms | Allocations: 70138)
 
 
+Started GET "/" for ::1 at 2025-03-09 22:02:58 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/index.html.erb within layouts/application
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 82.2ms | Allocations: 47206)
+  Rendered layout layouts/application.html.erb (Duration: 97.3ms | Allocations: 72952)
+Completed 200 OK in 110ms (Views: 99.2ms | ActiveRecord: 0.0ms | Allocations: 82494)
+
+
+Started GET "/" for ::1 at 2025-03-09 22:03:47 +0100
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/index.html.erb within layouts/application
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 3203)
+  Rendered layout layouts/application.html.erb (Duration: 29.4ms | Allocations: 5566)
+Completed 200 OK in 31ms (Views: 30.0ms | ActiveRecord: 0.0ms | Allocations: 5825)
+
+
