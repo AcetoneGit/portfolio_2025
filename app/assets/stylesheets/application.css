@@ -1,39 +1,26 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
-
-/*
- *= require font-awesome
- */
-
- @font-face {
+@font-face {
   font-family: 'Nightingale';
   src: url('/assets/DTNightingale-Light.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
-h1 {
-  font-family: 'Nightingale', sans-serif;
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
 }
 
 body {
-background-color:   #454545;
+  background-color: #1a1a1a;
+  color: #f6f6f6;
+  line-height: 1.6;
+  transition: background-color 0.3s ease;
   position: relative;
-  height: 100%;
-  margin: 0;
+}
+
+h1 {
+  font-family: 'Nightingale', sans-serif;
 }
 
 body > * {
@@ -41,17 +28,20 @@ body > * {
   z-index: 1;
 }
 
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 .header-container {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 20px;
+  display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
-  height: 82vh;
-  place-content: center;
+  height: 90vh;
+  animation: fadeIn 1s ease-out forwards;
 }
 
 .header-text {
@@ -59,25 +49,35 @@ body > * {
   flex-direction: column;
   align-items: flex-start;
   gap: 15px;
-  background-color: #3d3d3d;
-  opacity: 0.9;
-  border: 1px solid #3d3d3d;
-  padding:20px;
-  border-radius: 10px;
-  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  background: linear-gradient(135deg, rgba(80, 80, 80, 0.2) 0%, rgba(40, 40, 40, 0.2) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  padding: 40px;
+  border-radius: 16px;
+  transform: perspective(1000px) rotateY(5deg);
+  transition: all 0.5s ease;
+}
+
+.header-text:hover {
+  transform: perspective(1000px) rotateY(0deg);
 }
 
 .name {
-  font-size: clamp(48px, 7vw, 72px);
+  font-size: clamp(54px, 8vw, 82px);
   margin-top: 0;
   margin-bottom: 0;
-  color: rgb(255, 255, 255);
+  background: linear-gradient(90deg, #fff, #aaa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
   padding-left: 20px;
-  transition: 0.2s;
+  transition: 0.3s;
 }
 
 .name:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .name_2 {
@@ -86,7 +86,7 @@ body > * {
   margin-bottom: 0;
   color: rgb(255, 255, 255);
   padding-left: 20px;
-  transition: 0.2s;
+  transition: 0.3s;
 }
 
 .header-photo {
@@ -95,11 +95,19 @@ body > * {
 }
 
 .header-photo img {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
   object-fit: cover;
-  border-radius: 50%;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  filter: grayscale(20%);
+}
+
+.header-photo img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+  filter: grayscale(0%);
 }
 
 .header-links {
@@ -121,40 +129,25 @@ ul li {
 }
 
 ul li a {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 60px;
   height: 60px;
-  text-align: center;
-  line-height: 63px;
-  background: #333;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: white;
   border-radius: 50%;
   font-size: 30px;
-  color: #666;
-  transition: .5s;
-}
-
-ul li a::before {
-  content: '';
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background: #ffffff;
-  transition: .5s;
-  transform: scale(.9);
-  z-index: -1;
-}
-
-ul li a:hover::before {
-  transform: scale(1.1);
-  box-shadow: 0 0 15px #ffffff;
+  transition: all 0.4s ease;
 }
 
 ul li a:hover {
-  color: #ffffff;
-  box-shadow: 0 0 5px #ffffff;
-  text-shadow: 0 0 5px #ffffff;
+  background: white;
+  color: #1a1a1a;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 #particles-js {
@@ -166,45 +159,16 @@ ul li a:hover {
   z-index: 0;
 }
 
-html, body {
-  height: 100%;
-  margin: 0;
-}
-
-@media (max-width: 768px) {
-  .header-container {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 40px;
-  }
-
-  .header-photo {
-    grid-row: 1;
-  }
-
-  .header-text {
-    grid-row: 2;
-    align-items: center;
-  }
-
-  .header-links ul {
-    justify-content: center;
-  }
-}
-
-.skills-container {
-  max-width: 1200px;
-  margin: 100px auto;
-  padding: 0 2rem;
-}
-
 .section-title {
   font-family: 'Nightingale', sans-serif;
-  font-size: 48px;
-  color: white;
-  margin-bottom: 50px;
+  font-size: 56px;
+  margin-bottom: 60px;
   text-align: center;
   position: relative;
+  background: linear-gradient(90deg, #fff, #aaa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .section-title::after {
@@ -214,8 +178,23 @@ html, body {
   left: 50%;
   transform: translateX(-50%);
   width: 100px;
-  height: 3px;
-  background: #f6f6f6;
+  height: 4px;
+  background: linear-gradient(90deg, #fff, rgba(255,255,255,0.2));
+  border-radius: 2px;
+}
+
+.skills-container, .projects-container, .education-container {
+  max-width: 1200px;
+  margin: 120px auto;
+  padding: 0 2rem;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.skills-container { animation-delay: 0.2s; }
+.projects-container { animation-delay: 0.4s; }
+.education-container {
+  animation-delay: 0.6s;
+  padding-bottom: 40px;
 }
 
 .skills-grid {
@@ -226,37 +205,37 @@ html, body {
 }
 
 .skill-card {
-  background: rgba(35, 37, 38, 0.7);
-  border-radius: 12px;
-  padding: 25px 20px;
+  background: linear-gradient(145deg, rgba(50, 50, 50, 0.3), rgba(30, 30, 30, 0.3));
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 30px;
   text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
-  backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
   width: 100%;
   max-width: 200px;
 }
 
 .skill-card:hover {
-  transform: translateY(-7px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
 .skill-icon {
-  font-size: 60px;
-  margin-bottom: 15px;
-  color: #f6f6f6;
-}
-
-.skill-icon i {
-  filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.4));
+  font-size: 70px;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #fff, #aaa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .skill-name {
   color: white;
   margin: 10px 0 5px;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .skill-level {
@@ -264,36 +243,7 @@ html, body {
   font-size: 14px;
   font-weight: 500;
   margin: 5px 0 0;
-}
-
-@media (max-width: 768px) {
-  .skills-grid {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
-  }
-
-  .skill-card {
-    padding: 20px 15px;
-    max-width: 150px;
-  }
-
-  .skill-icon {
-    font-size: 45px;
-  }
-
-  .section-title {
-    font-size: 36px;
-  }
-}
-
-.svg_color {
-  color: grey;
-}
-
-.projects-container {
-  max-width: 1200px;
-  margin: 120px auto;
-  padding: 0 2rem;
+  opacity: 0.8;
 }
 
 .projects-grid {
@@ -303,23 +253,23 @@ html, body {
 }
 
 .project-card {
-  background: rgba(35, 37, 38, 0.7);
-  border-radius: 12px;
+  background: linear-gradient(145deg, rgba(50, 50, 50, 0.3), rgba(30, 30, 30, 0.3));
+  border-radius: 16px;
   overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
-  backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
   height: 100%;
 }
 
 .project-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
 .project-image {
   position: relative;
-  height: 220px;
+  height: 250px;
   overflow: hidden;
 }
 
@@ -327,7 +277,27 @@ html, body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s;
+  transition: transform 0.7s;
+}
+
+.project-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s;
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  z-index: 1;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
 }
 
 .project-card:hover .project-image img {
@@ -342,6 +312,7 @@ html, body {
   gap: 10px;
   opacity: 0;
   transition: opacity 0.3s;
+  z-index: 2;
 }
 
 .project-card:hover .project-links {
@@ -354,15 +325,16 @@ html, body {
   justify-content: center;
   width: 40px;
   height: 40px;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
   border-radius: 50%;
   color: white;
-  transition: background 0.3s, transform 0.3s;
+  transition: all 0.3s ease;
 }
 
 .project-link:hover {
-  background: #454545;
-  color: #222;
+  background: white;
+  color: #1a1a1a;
   transform: scale(1.1);
 }
 
@@ -381,52 +353,28 @@ html, body {
   color: rgba(255, 255, 255, 0.8);
   font-size: 16px;
   margin-bottom: 20px;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .project-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 10px;
 }
 
 .tag {
-  background: #3d3d3d;
+  background: rgba(255, 255, 255, 0.1);
   color: #f6f6f6;
   font-size: 12px;
   font-weight: 500;
-  padding: 6px 12px;
+  padding: 8px 14px;
   border-radius: 30px;
-  transition: background 0.3s;
+  transition: all 0.3s ease;
 }
 
 .tag:hover {
-  background: #454545;
-}
-
-@media (max-width: 768px) {
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .project-image {
-    height: 200px;
-  }
-
-  .project-title {
-    font-size: 20px;
-  }
-
-  .project-description {
-    font-size: 14px;
-  }
-}
-
-.education-container {
-  max-width: 1200px;
-  margin: 120px auto;
-  padding: 0 2rem;
-  padding-bottom: 40px;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
 }
 
 .education-timeline {
@@ -439,17 +387,17 @@ html, body {
 .education-item {
   display: flex;
   align-items: stretch;
-  background: rgba(35, 37, 38, 0.7);
-  border-radius: 12px;
+  background: linear-gradient(145deg, rgba(50, 50, 50, 0.3), rgba(30, 30, 30, 0.3));
+  border-radius: 16px;
   overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
-  backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 .education-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
 .education-logo {
@@ -461,10 +409,17 @@ html, body {
   background: rgba(25, 27, 28, 0.5);
 }
 
-.education-logo img {
+.education-logo img, .education-logo svg {
   max-width: 100%;
   max-height: 100px;
   object-fit: contain;
+  filter: grayscale(30%);
+  transition: filter 0.3s;
+}
+
+.education-item:hover .education-logo img,
+.education-item:hover .education-logo svg {
+  filter: grayscale(0%);
 }
 
 .education-divider {
@@ -498,7 +453,7 @@ html, body {
 }
 
 .education-date {
-  background: #6d6d6d;
+  background: rgba(255, 255, 255, 0.1);
   color: #f6f6f6;
   font-size: 14px;
   font-weight: 500;
@@ -514,6 +469,32 @@ html, body {
 }
 
 @media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+    height: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .header-text {
+    align-items: center;
+    transform: none;
+  }
+
+  .header-photo {
+    order: 1;
+  }
+
+  .header-text {
+    order: 2;
+  }
+
+  .skill-card, .project-card {
+    transform: none;
+  }
+
   .education-item {
     flex-direction: column;
   }
@@ -527,21 +508,11 @@ html, body {
     display: none;
   }
 
-  .education-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
+  .projects-grid {
+    grid-template-columns: 1fr;
   }
 
-  .education-date {
-    align-self: flex-start;
-  }
-
-  .education-title {
-    font-size: 18px;
-  }
-
-  .education-description {
-    font-size: 14px;
+  .project-image {
+    height: 200px;
   }
 }
