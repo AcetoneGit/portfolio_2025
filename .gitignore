@@ -1,0 +1,5 @@
+/tmp/cache/
+/tmp/cache/assets/
+/tmp/cache/assets/sprockets/
+*.cache
+*.store
