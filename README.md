@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+I create this portfolio to share what i do all days.
 
-Things you may want to cover:
+* Use of Html
 
-* Ruby version
+* Use of Css
 
-* System dependencies
+* Use of JS for particles.js
 
-* Configuration
+* Use of RoR for structure
 
-* Database creation
+* Use Heroku to deploy
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Available at www.ac-portfolio.online
