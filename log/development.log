@@ -3164,3 +3164,13 @@ ActionView::Template::Error (The asset "application.css" is not present in the a
     12:     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
   
 app/views/layouts/application.html.erb:9
+Started GET "/" for ::1 at 2025-03-27 02:00:37 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/index.html.erb within layouts/application
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 73.0ms | Allocations: 40015)
+  Rendered layout layouts/application.html.erb (Duration: 85.6ms | Allocations: 63193)
+Completed 200 OK in 99ms (Views: 88.3ms | ActiveRecord: 0.0ms | Allocations: 72736)
+
+
