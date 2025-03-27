@@ -518,8 +518,7 @@ ul li a:hover {
 }
 
 .no_decoration {
-  text-decoration: none;
-  font-weight: bold;
+  text-decoration: none !important;
 }
 
 .rails:hover {
