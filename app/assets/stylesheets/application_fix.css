@@ -570,3 +570,53 @@ ul li a:hover {
   background-color: rgba(51, 103, 144, 0.95);
   transition: 0.4s ease;
 }
+
+.codewars-container {
+  max-width: 1200px;
+  margin: 120px auto;
+  padding: 0 2rem;
+  animation: fadeIn 1s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+.codewars-stats {
+  display: flex;
+  justify-content: center;
+}
+
+.codewars-card {
+  background: linear-gradient(145deg, rgba(50, 50, 50, 0.3), rgba(30, 30, 30, 0.3));
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 40px;
+  text-align: center;
+  transition: all 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  min-width: 280px;
+}
+
+.codewars-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.codewars-logo {
+  font-size: 70px;
+  margin-bottom: 20px;
+  color: #BB432C;
+}
+
+.codewars-card h3 {
+  color: white;
+  margin: 10px 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.codewars-card p {
+  color: #f6f6f6;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 5px 0 0;
+}
