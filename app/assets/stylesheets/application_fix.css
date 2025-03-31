@@ -643,16 +643,15 @@ ul li a:hover {
   }
 
   h1, h2, h3, .name, .name_2 {
-    font-size: 24px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    padding: 0 10px;
+    font-size: clamp(20px, 5vw, 36px);
     width: 100%;
     max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
   }
 
-  .name, .name_2 {
-    font-size: 28px;
+  .name {
+    font-size: clamp(24px, 6vw, 36px);
   }
 }
