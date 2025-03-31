@@ -642,10 +642,10 @@ ul li a:hover {
     display: none;
   }
 
-  h1, h2, h3, .name, .name_2 {
+  h1, h2, h3, .name, .name_2 .section-title{
     font-size: clamp(20px, 5vw, 36px);
-    width: 100%;
-    max-width: 100%;
+    width: 80%;
+    max-width: 80%;
     word-wrap: break-word;
     overflow-wrap: break-word;
     hyphens: auto;
