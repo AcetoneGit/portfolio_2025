@@ -633,4 +633,16 @@ ul li a:hover {
   .scroll-indicator {
     display: none;
   }
+
+  .header-text {
+    padding: 20px;
+  }
+
+  .project-card, .education-item, .skill-card, .codewars-card {
+    max-width: 100%;
+  }
+
+  .name, .name_2 {
+    padding-left: 0;
+  }
 }
