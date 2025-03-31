@@ -11,13 +11,20 @@
 
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 
+    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
-    <div  id="particles-js" data-controller="particles"></div>
-      <div class="content-wrapper">
-        <%= yield %>
-      </div>
+    <div id="particles-js" data-controller="particles"></div>
+    <div data-controller="cursor">
+      <div data-cursor-target="cursor" class="cursor"></div>
+      <div data-cursor-target="follower" class="cursor-follower"></div>
+    </div>
+    <div class="scroll-indicator" data-controller="scroll-indicator"></div>
+    <div class="content-wrapper" data-controller="scroll-reveal">
+      <%= yield %>
+    </div>
   </body>
 </html>
