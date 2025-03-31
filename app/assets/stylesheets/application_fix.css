@@ -577,7 +577,7 @@ ul li a:hover {
   transition: width 0.1s;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 480px) {
   .header-container {
     flex-direction: column;
     text-align: center;
