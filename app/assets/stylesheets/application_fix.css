@@ -642,16 +642,16 @@ ul li a:hover {
     display: none;
   }
 
-  h1, h2, h3, .name, .name_2{
-    font-size: clamp(20px, 5vw, 36px);
-    width: 80%;
-    max-width: 80%;
+  h1, h2, h3, .name, .name_2 {
+    font-size: clamp(28px, 7vw, 48px);
+    width: 100%;
+    max-width: 100%;
     word-wrap: break-word;
     overflow-wrap: break-word;
     hyphens: auto;
   }
 
   .name {
-    font-size: clamp(24px, 6vw, 36px);
+    font-size: clamp(36px, 8vw, 54px);
   }
 }
