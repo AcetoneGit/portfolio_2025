@@ -161,11 +161,12 @@ ul li a:hover {
 
 #particles-js {
   position: fixed;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vw;
   top: 0;
   left: 0;
   z-index: 0;
+  overflow: hidden;
 }
 
 .section-title {
@@ -244,7 +245,7 @@ ul li a:hover {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 40px;
 }
 
@@ -575,4 +576,61 @@ ul li a:hover {
   background: linear-gradient(90deg, #000000, #ffffff);
   z-index: 2000;
   transition: width 0.1s;
+}
+
+@media (max-width: 480px) {
+  .header-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+    height: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .header-text {
+    align-items: center;
+    transform: none;
+  }
+
+  .header-photo {
+    order: 1;
+  }
+
+  .header-text {
+    order: 2;
+  }
+
+  .skill-card, .project-card {
+    transform: none;
+  }
+
+  .education-item {
+    flex-direction: column;
+  }
+
+  .education-logo {
+    width: 100%;
+    height: 120px;
+  }
+
+  .education-divider {
+    display: none;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-image {
+    height: 200px;
+  }
+
+  .cursor, .cursor-follower {
+    display: none;
+  }
+
+  .scroll-indicator {
+    display: none;
+  }
 }
