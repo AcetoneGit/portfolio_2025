@@ -628,4 +628,8 @@ ul li a:hover {
   .cursor, .cursor-follower {
     display: none;
   }
+
+  .scroll-indicator {
+    display: none;
+  }
 }
