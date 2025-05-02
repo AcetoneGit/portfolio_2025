@@ -3885,3 +3885,169 @@ Processing by PortfoliosController#index as HTML
 Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.0ms | Allocations: 5978)
 
 
+Started GET "/" for ::1 at 2025-05-02 21:20:04 +0200
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/index.html.erb within layouts/application
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 16.5ms | Allocations: 3653)
+  Rendered layout layouts/application.html.erb (Duration: 27.3ms | Allocations: 5668)
+Completed 200 OK in 30ms (Views: 28.6ms | ActiveRecord: 0.0ms | Allocations: 5935)
+
+
+Started GET "/" for ::1 at 2025-05-02 21:20:09 +0200
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/index.html.erb within layouts/application
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 11.4ms | Allocations: 3653)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 5668)
+Completed 200 OK in 23ms (Views: 16.0ms | ActiveRecord: 0.0ms | Allocations: 5943)
+
+
+Started GET "/" for ::1 at 2025-05-02 21:23:22 +0200
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/index.html.erb within layouts/application
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 13.1ms | Allocations: 4497)
+  Rendered layout layouts/application.html.erb (Duration: 38.9ms | Allocations: 43043)
+Completed 200 OK in 42ms (Views: 40.0ms | ActiveRecord: 0.0ms | Allocations: 44617)
+
+
+Started GET "/" for ::1 at 2025-05-02 21:23:34 +0200
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/index.html.erb within layouts/application
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 5095)
+  Rendered layout layouts/application.html.erb (Duration: 29.3ms | Allocations: 43674)
+Completed 200 OK in 35ms (Views: 30.8ms | ActiveRecord: 0.0ms | Allocations: 45247)
+
+
+Started GET "/" for ::1 at 2025-05-02 21:41:18 +0200
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/index.html.erb within layouts/application
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 80.3ms | Allocations: 34231)
+  Rendered layout layouts/application.html.erb (Duration: 96.8ms | Allocations: 72735)
+Completed 200 OK in 103ms (Views: 98.9ms | ActiveRecord: 0.0ms | Allocations: 74308)
+
+
+Started GET "/" for ::1 at 2025-05-02 21:42:16 +0200
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/index.html.erb within layouts/application
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 6.4ms | Allocations: 5323)
+  Rendered layout layouts/application.html.erb (Duration: 31.7ms | Allocations: 43917)
+Completed 200 OK in 37ms (Views: 34.7ms | ActiveRecord: 0.0ms | Allocations: 45490)
+
+
+Started GET "/" for ::1 at 2025-05-02 21:44:37 +0200
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/index.html.erb within layouts/application
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 40.2ms | Allocations: 34788)
+  Rendered layout layouts/application.html.erb (Duration: 55.8ms | Allocations: 73338)
+Completed 200 OK in 63ms (Views: 57.3ms | ActiveRecord: 0.0ms | Allocations: 74911)
+
+
+Started GET "/" for ::1 at 2025-05-02 21:44:54 +0200
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/index.html.erb within layouts/application
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 5523)
+  Rendered layout layouts/application.html.erb (Duration: 26.5ms | Allocations: 44081)
+Completed 200 OK in 31ms (Views: 27.6ms | ActiveRecord: 0.0ms | Allocations: 45654)
+
+
+Started GET "/" for ::1 at 2025-05-02 21:46:34 +0200
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/index.html.erb within layouts/application
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 11.5ms | Allocations: 5600)
+  Rendered layout layouts/application.html.erb (Duration: 30.9ms | Allocations: 44152)
+Completed 200 OK in 34ms (Views: 32.2ms | ActiveRecord: 0.0ms | Allocations: 45725)
+
+
+Started GET "/" for ::1 at 2025-05-02 21:47:46 +0200
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/index.html.erb within layouts/application
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 11.1ms | Allocations: 5527)
+  Rendered layout layouts/application.html.erb (Duration: 30.7ms | Allocations: 44088)
+Completed 200 OK in 38ms (Views: 32.4ms | ActiveRecord: 0.0ms | Allocations: 45661)
+
+
+Started GET "/" for ::1 at 2025-05-02 21:53:44 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/index.html.erb within layouts/application
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 162.7ms | Allocations: 55885)
+  Rendered layout layouts/application.html.erb (Duration: 162.8ms | Allocations: 56007)
+Completed 500 Internal Server Error in 178ms (ActiveRecord: 0.0ms | Allocations: 65528)
+
+
+  
+ActionView::Template::Error (The asset "krafte.jpg" is not present in the asset pipeline.
+):
+    212:        <div class="project-card">
+    213:       <div class="project-image">
+    214:         <div class="project-overlay"></div>
+    215:         <%= image_tag("krafte.jpg", width: 200) %>
+    216:       </div>
+    217:       <div class="project-info">
+    218:         <h3 class="project-title">Kräfte</h3>
+  
+app/views/portfolios/index.html.erb:215
+Started GET "/" for ::1 at 2025-05-02 21:54:00 +0200
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/index.html.erb within layouts/application
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 11.1ms | Allocations: 5731)
+  Rendered layout layouts/application.html.erb (Duration: 39.1ms | Allocations: 44797)
+Completed 200 OK in 44ms (Views: 40.7ms | ActiveRecord: 0.0ms | Allocations: 46412)
+
+
+Started GET "/" for ::1 at 2025-05-02 21:54:18 +0200
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/index.html.erb within layouts/application
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 5735)
+  Rendered layout layouts/application.html.erb (Duration: 20.6ms | Allocations: 44511)
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.0ms | Allocations: 46084)
+
+
+Started GET "/" for ::1 at 2025-05-02 21:57:07 +0200
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/index.html.erb within layouts/application
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 7.6ms | Allocations: 5735)
+  Rendered layout layouts/application.html.erb (Duration: 30.5ms | Allocations: 44702)
+Completed 200 OK in 33ms (Views: 31.6ms | ActiveRecord: 0.0ms | Allocations: 46277)
+
+
+Started GET "/" for ::1 at 2025-05-02 21:59:36 +0200
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/index.html.erb within layouts/application
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 15.6ms | Allocations: 5709)
+  Rendered layout layouts/application.html.erb (Duration: 46.6ms | Allocations: 44464)
+Completed 200 OK in 51ms (Views: 48.5ms | ActiveRecord: 0.0ms | Allocations: 46039)
+
+
+Started GET "/" for ::1 at 2025-05-02 22:01:42 +0200
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/index.html.erb within layouts/application
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 11.3ms | Allocations: 5731)
+  Rendered layout layouts/application.html.erb (Duration: 33.2ms | Allocations: 44503)
+Completed 200 OK in 36ms (Views: 34.2ms | ActiveRecord: 0.0ms | Allocations: 46076)
+
+
+Started GET "/" for ::1 at 2025-05-02 22:03:23 +0200
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/index.html.erb within layouts/application
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 27.4ms | Allocations: 5080)
+  Rendered layout layouts/application.html.erb (Duration: 34.6ms | Allocations: 7166)
+Completed 200 OK in 36ms (Views: 35.3ms | ActiveRecord: 0.0ms | Allocations: 7435)
+
+
